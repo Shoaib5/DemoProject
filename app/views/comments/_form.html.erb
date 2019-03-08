@@ -1,0 +1,9 @@
+
+<%= form_for([@product, Comment.new], remote: true) do |form| %>
+  <p>
+    <%= form.text_area :body, placeholder: "write something" %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

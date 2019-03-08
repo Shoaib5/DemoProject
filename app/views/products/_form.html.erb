@@ -1,0 +1,30 @@
+<h2>Product Details</h2>
+
+<%= form_with(model: product,local: true) do |f| %>
+  <%= render "error_messages", resource: @product %>
+  <div class="field">
+    <%= f.label :product_type %><br />
+    <%= f.text_field :product_type, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit @pre %>
+  </div>
+  <%= link_to 'Back', products_path%>
+<% end %>
